@@ -30,12 +30,12 @@ import {
   StableDebtToken,
   VariableDebtToken,
   WETH9Mocked,
-  HopeLendOracle,
+  HopeOracle,
   getWrappedTokenGateway,
   WrappedTokenGateway,
   tEthereumAddress,
   getEthersSigners,
-  getHopeLendOracle,
+  getHopeOracle,
   getIncentivesV2,
   getBlockTimestamp,
   TESTNET_REWARD_TOKEN_PREFIX,
@@ -67,7 +67,7 @@ export interface TestEnv {
   riskAdmin: SignerWithAddress;
   pool: Pool;
   configurator: PoolConfigurator;
-  oracle: HopeLendOracle;
+  oracle: HopeOracle;
   helpersContract: HopeLendProtocolDataProvider;
   weth: WETH9Mocked;
   hWETH: HToken;
@@ -111,7 +111,7 @@ const testEnv: TestEnv = {
   pool: {} as Pool,
   configurator: {} as PoolConfigurator,
   helpersContract: {} as HopeLendProtocolDataProvider,
-  oracle: {} as HopeLendOracle,
+  oracle: {} as HopeOracle,
   weth: {} as WETH9Mocked,
   hWETH: {} as HToken,
   dai: {} as MintableERC20,
@@ -172,7 +172,7 @@ export async function initializeMakeSuite() {
 
   testEnv.registry = await getPoolAddressesProviderRegistry();
   testEnv.registry = await getPoolAddressesProviderRegistry();
-  testEnv.oracle = await getHopeLendOracle();
+  testEnv.oracle = await getHopeOracle();
 
   testEnv.helpersContract = await getHopeLendProtocolDataProvider();
 

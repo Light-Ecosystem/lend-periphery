@@ -4,7 +4,7 @@ pragma solidity ^0.8.10;
 import {IERC20Detailed} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20Detailed.sol';
 import {IPoolAddressesProvider} from 'lend-core/contracts/interfaces/IPoolAddressesProvider.sol';
 import {IPool} from 'lend-core/contracts/interfaces/IPool.sol';
-import {IHopeLendOracle} from 'lend-core/contracts/interfaces/IHopeLendOracle.sol';
+import {IHopeOracle} from 'lend-core/contracts/interfaces/IHopeOracle.sol';
 import {IHToken} from 'lend-core/contracts/interfaces/IHToken.sol';
 import {IVariableDebtToken} from 'lend-core/contracts/interfaces/IVariableDebtToken.sol';
 import {IStableDebtToken} from 'lend-core/contracts/interfaces/IStableDebtToken.sol';
@@ -69,7 +69,7 @@ contract UiPoolDataProvider is IUiPoolDataProvider {
     override
     returns (AggregatedReserveData[] memory, BaseCurrencyInfo memory)
   {
-    IHopeLendOracle oracle = IHopeLendOracle(provider.getPriceOracle());
+    IHopeOracle oracle = IHopeOracle(provider.getPriceOracle());
     IPool pool = IPool(provider.getPool());
     HopeLendProtocolDataProvider poolDataProvider = HopeLendProtocolDataProvider(
       provider.getPoolDataProvider()
