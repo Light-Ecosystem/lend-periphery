@@ -147,6 +147,7 @@ contract UiPoolDataProvider is IUiPoolDataProvider {
         reserveData.stableBorrowRateEnabled,
         reserveData.isPaused
       ) = reserveConfigurationMap.getFlags();
+      reserveData.flashLoanEnabled = reserveConfigurationMap.getFlashLoanEnabled();
 
       InterestRates memory interestRates = getInterestRateStrategySlopes(
         DefaultReserveInterestRateStrategy(reserveData.interestRateStrategyAddress)
