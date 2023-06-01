@@ -6,7 +6,7 @@ before(async () => {
     console.log('Skipping due empty test run.');
     return;
   }
-  await hre.deployments.fixture(['market', 'periphery-post']);
+  await hre.deployments.fixture(['light-dao', 'market', 'periphery-post']);
 
   console.log('-> Deployed market');
 

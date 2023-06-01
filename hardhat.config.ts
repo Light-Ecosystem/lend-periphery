@@ -109,15 +109,6 @@ const config: HardhatUserConfig = {
     treasuryProxyAdmin: {
       default: 1,
     },
-    incentivesProxyAdmin: {
-      default: 1,
-    },
-    incentivesEmissionManager: {
-      default: 0,
-    },
-    incentivesRewardsVault: {
-      default: 2,
-    },
   },
   // Need to compile hopeLend contracts due no way to import external artifacts for hre.ethers
   dependencyCompiler: {
@@ -126,7 +117,6 @@ const config: HardhatUserConfig = {
       'lend-core/contracts/protocol/configuration/PoolAddressesProvider.sol',
       'lend-core/contracts/misc/HopeOracle.sol',
       'lend-core/contracts/protocol/tokenization/HToken.sol',
-      'lend-core/contracts/protocol/tokenization/DelegationAwareHToken.sol',
       'lend-core/contracts/protocol/tokenization/StableDebtToken.sol',
       'lend-core/contracts/protocol/tokenization/VariableDebtToken.sol',
       'lend-core/contracts/protocol/libraries/logic/GenericLogic.sol',
@@ -146,7 +136,6 @@ const config: HardhatUserConfig = {
       'lend-core/contracts/misc/HopeLendProtocolDataProvider.sol',
       'lend-core/contracts/protocol/configuration/ACLManager.sol',
       'lend-core/contracts/dependencies/weth/WETH9.sol',
-      'lend-core/contracts/mocks/helpers/MockIncentivesController.sol',
       'lend-core/contracts/mocks/helpers/MockReserveConfiguration.sol',
       'lend-core/contracts/mocks/oracle/CLAggregators/MockAggregator.sol',
       'lend-core/contracts/mocks/tokens/MintableERC20.sol',

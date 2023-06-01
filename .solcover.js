@@ -3,10 +3,8 @@ const cp = require('child_process');
 module.exports = {
   skipFiles: [
     './mocks',
-    './misc/UiIncentiveDataProvider.sol',
     './misc/UiPoolDataProvider.sol',
     './misc/WalletBalanceProvider.sol',
-    './rewards/interfaces/',
     './misc/interfaces/',
   ],
   onCompileComplete: function () {

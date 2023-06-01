@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0
 pragma solidity ^0.8.10;
 
-import {IRewardsController} from '../rewards/interfaces/IRewardsController.sol';
-
 contract HTokenMock {
-  IRewardsController public _aic;
   uint256 internal _userBalance;
   uint256 internal _totalSupply;
   uint256 internal immutable _decimals;
@@ -18,34 +15,8 @@ contract HTokenMock {
     uint256 assetIndex
   );
 
-  event Accrued(
-    address indexed asset,
-    address indexed user,
-    uint256 assetIndex,
-    uint256 userIndex,
-    uint256 rewardsAccrued
-  );
-
-  constructor(IRewardsController aic, uint256 decimals) {
-    _aic = aic;
+  constructor(uint256 decimals) {
     _decimals = decimals;
-  }
-
-  function handleActionOnAic(
-    address user,
-    uint256 totalSupply,
-    uint256 userBalance
-  ) external {
-    _aic.handleAction(user, totalSupply, userBalance);
-  }
-
-  function doubleHandleActionOnAic(
-    address user,
-    uint256 totalSupply,
-    uint256 userBalance
-  ) external {
-    _aic.handleAction(user, totalSupply, userBalance);
-    _aic.handleAction(user, totalSupply, userBalance);
   }
 
   function setUserBalanceAndSupply(uint256 userBalance, uint256 totalSupply) public {
