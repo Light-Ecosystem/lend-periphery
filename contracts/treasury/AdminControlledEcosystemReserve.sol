@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.10;
+pragma solidity 0.8.17;
 
 import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 import {IAdminControlledEcosystemReserve} from './interfaces/IAdminControlledEcosystemReserve.sol';
@@ -24,7 +24,7 @@ abstract contract AdminControlledEcosystemReserve is
 
   address internal _fundsAdmin;
 
-  uint256 public constant REVISION = 4;
+  uint256 public constant REVISION = 1;
 
   /// @inheritdoc IAdminControlledEcosystemReserve
   address public constant ETH_MOCK_ADDRESS = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;

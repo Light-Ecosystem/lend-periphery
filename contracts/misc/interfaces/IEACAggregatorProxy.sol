@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0
-pragma solidity ^0.8.10;
+pragma solidity 0.8.17;
 
 interface IEACAggregatorProxy {
   function decimals() external view returns (uint8);

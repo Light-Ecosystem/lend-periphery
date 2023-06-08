@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity 0.8.17;
 
-import {Ownable} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable.sol';
+import {Ownable2Step} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
 import {IStreamable} from './interfaces/IStreamable.sol';
 import {IAdminControlledEcosystemReserve} from './interfaces/IAdminControlledEcosystemReserve.sol';
 import {IHopeLendEcosystemReserveController} from './interfaces/IHopeLendEcosystemReserveController.sol';
 import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 
-contract HopeLendEcosystemReserveController is Ownable, IHopeLendEcosystemReserveController {
+contract HopeLendEcosystemReserveController is Ownable2Step, IHopeLendEcosystemReserveController {
   /**
    * @notice Constructor.
    * @param hopeLendGovShortTimelock The address of the HopeLend's governance executor, owning this contract
    */
   constructor(address hopeLendGovShortTimelock) {
-    transferOwnership(hopeLendGovShortTimelock);
+    _transferOwnership(hopeLendGovShortTimelock);
   }
 
   /// @inheritdoc IHopeLendEcosystemReserveController

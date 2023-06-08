@@ -37,6 +37,7 @@ import {
   TESTNET_PRICE_AGGR_PREFIX,
 } from 'lend-deploy';
 import { parseEther } from 'ethers/lib/utils';
+import { waitForTx } from 'lend-deploy';
 
 chai.use(bignumberChai());
 
@@ -176,11 +177,18 @@ export async function initializeMakeSuite() {
   testEnv.weth = await getWETHMocked(wethAddress);
   testEnv.WrappedTokenGateway = await getWrappedTokenGateway();
 
+  const mintableERC20Tokens = [testEnv.dai, testEnv.hope, testEnv.usdc, testEnv.weth];
+  for (const token of mintableERC20Tokens) {
+    for (const user of testEnv.users) {
+      await waitForTx(await token.addMinter(user.address));
+    }
+  }
+
   // Added extra reward token
   await hre.deployments.deploy(`EXTRA${TESTNET_REWARD_TOKEN_PREFIX}`, {
     from: await _deployer.getAddress(),
     contract: 'MintableERC20',
-    args: ['EXTRA', 'EXTRA', 18],
+    args: ['EXTRA', 'EXTRA', 18, deployer.address],
     log: true,
   });
   await hre.deployments.deploy(`EXTRA${TESTNET_PRICE_AGGR_PREFIX}`, {

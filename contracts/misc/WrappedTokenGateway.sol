@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0
-pragma solidity ^0.8.10;
+pragma solidity 0.8.17;
 
-import {Ownable} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable.sol';
+import {Ownable2Step} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
 import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 import {GPv2SafeERC20} from 'lend-core/contracts/dependencies/gnosis/contracts/GPv2SafeERC20.sol';
 import {IWETH} from 'lend-core/contracts/misc/interfaces/IWETH.sol';
@@ -17,7 +17,7 @@ import {DataTypesHelper} from '../libraries/DataTypesHelper.sol';
  * @dev This contract is an upgrade of the WrappedTokenGateway contract, with immutable pool address.
  * This contract keeps the same interface of the deprecated WrappedTokenGateway contract.
  */
-contract WrappedTokenGateway is IWrappedTokenGateway, Ownable {
+contract WrappedTokenGateway is IWrappedTokenGateway, Ownable2Step {
   using ReserveConfiguration for DataTypes.ReserveConfigurationMap;
   using UserConfiguration for DataTypes.UserConfigurationMap;
   using GPv2SafeERC20 for IERC20;
@@ -37,7 +37,7 @@ contract WrappedTokenGateway is IWrappedTokenGateway, Ownable {
   ) {
     WETH = IWETH(weth);
     POOL = pool;
-    transferOwnership(owner);
+    _transferOwnership(owner);
     IWETH(weth).approve(address(pool), type(uint256).max);
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0
-pragma solidity ^0.8.10;
+pragma solidity 0.8.17;
 
 import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 import {DataTypes} from 'lend-core/contracts/protocol/libraries/types/DataTypes.sol';
