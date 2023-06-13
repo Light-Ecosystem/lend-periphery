@@ -13,6 +13,7 @@ import 'hardhat-dependency-compiler';
 import 'hardhat-deploy';
 
 import dotenv from 'dotenv';
+import { DEFAULT_NAMED_ACCOUNTS } from 'lend-deploy';
 dotenv.config({ path: '../.env' });
 
 const DEFAULT_BLOCK_GAS_LIMIT = 12450000;
@@ -91,24 +92,7 @@ const config: HardhatUserConfig = {
     bail: true,
   },
   namedAccounts: {
-    deployer: {
-      default: 0,
-    },
-    aclAdmin: {
-      default: 0,
-    },
-    emergencyAdmin: {
-      default: 0,
-    },
-    poolAdmin: {
-      default: 0,
-    },
-    addressesProviderRegistryOwner: {
-      default: 0,
-    },
-    treasuryProxyAdmin: {
-      default: 1,
-    },
+    ...DEFAULT_NAMED_ACCOUNTS,
   },
   // Need to compile hopeLend contracts due no way to import external artifacts for hre.ethers
   dependencyCompiler: {
