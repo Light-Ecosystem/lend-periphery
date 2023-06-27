@@ -34,7 +34,7 @@ abstract contract AdminControlledEcosystemReserve is
     _;
   }
 
-  function getRevision() internal pure override returns (uint256) {
+  function getRevision() internal pure virtual override returns (uint256) {
     return REVISION;
   }
 
