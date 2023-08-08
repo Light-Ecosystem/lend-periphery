@@ -1,6 +1,6 @@
 {
   "name": "@hopelend/periphery",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "HopeLend Protocol periphery smart contracts",
   "files": [
     "contracts",
@@ -72,6 +72,10 @@
     "typechain": "^5.1.2",
     "typescript": "^4.2.4",
     "jsondiffpatch": "^0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Light-Ecosystem/lend-periphery"
   },
   "dependencies": {
     "@hopelend/core": "^1.0.0"
