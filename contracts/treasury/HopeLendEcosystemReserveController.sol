@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import {Ownable2Step} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
+import {Ownable2Step} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
 import {IStreamable} from './interfaces/IStreamable.sol';
 import {IAdminControlledEcosystemReserve} from './interfaces/IAdminControlledEcosystemReserve.sol';
 import {IHopeLendEcosystemReserveController} from './interfaces/IHopeLendEcosystemReserveController.sol';
-import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
+import {IERC20} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 
 contract HopeLendEcosystemReserveController is Ownable2Step, IHopeLendEcosystemReserveController {
   /**

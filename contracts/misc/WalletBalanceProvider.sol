@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: LGPL-3.0
 pragma solidity 0.8.17;
 
-import {Address} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Address.sol';
-import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
+import {Address} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/Address.sol';
+import {IERC20} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 
-import {IPoolAddressesProvider} from 'lend-core/contracts/interfaces/IPoolAddressesProvider.sol';
-import {IPool} from 'lend-core/contracts/interfaces/IPool.sol';
-import {GPv2SafeERC20} from 'lend-core/contracts/dependencies/gnosis/contracts/GPv2SafeERC20.sol';
-import {ReserveConfiguration} from 'lend-core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
-import {DataTypes} from 'lend-core/contracts/protocol/libraries/types/DataTypes.sol';
+import {IPoolAddressesProvider} from '@hopelend/core/contracts/interfaces/IPoolAddressesProvider.sol';
+import {IPool} from '@hopelend/core/contracts/interfaces/IPool.sol';
+import {GPv2SafeERC20} from '@hopelend/core/contracts/dependencies/gnosis/contracts/GPv2SafeERC20.sol';
+import {ReserveConfiguration} from '@hopelend/core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
+import {DataTypes} from '@hopelend/core/contracts/protocol/libraries/types/DataTypes.sol';
 
 /**
  * @title WalletBalanceProvider contract

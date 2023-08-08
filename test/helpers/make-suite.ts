@@ -35,9 +35,9 @@ import {
   getHopeOracle,
   TESTNET_REWARD_TOKEN_PREFIX,
   TESTNET_PRICE_AGGR_PREFIX,
-} from 'lend-deploy';
+} from '@hopelend/deploy';
 import { parseEther } from 'ethers/lib/utils';
-import { waitForTx } from 'lend-deploy';
+import { waitForTx } from '@hopelend/deploy';
 
 chai.use(bignumberChai());
 

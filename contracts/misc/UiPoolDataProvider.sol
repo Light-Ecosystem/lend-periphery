@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: LGPL-3.0
 pragma solidity 0.8.17;
 
-import {IERC20Detailed} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20Detailed.sol';
-import {IPoolAddressesProvider} from 'lend-core/contracts/interfaces/IPoolAddressesProvider.sol';
-import {IPool} from 'lend-core/contracts/interfaces/IPool.sol';
-import {IHopeOracle} from 'lend-core/contracts/interfaces/IHopeOracle.sol';
-import {IHToken} from 'lend-core/contracts/interfaces/IHToken.sol';
-import {IVariableDebtToken} from 'lend-core/contracts/interfaces/IVariableDebtToken.sol';
-import {IStableDebtToken} from 'lend-core/contracts/interfaces/IStableDebtToken.sol';
-import {DefaultReserveInterestRateStrategy} from 'lend-core/contracts/protocol/pool/DefaultReserveInterestRateStrategy.sol';
-import {HopeLendProtocolDataProvider} from 'lend-core/contracts/misc/HopeLendProtocolDataProvider.sol';
-import {WadRayMath} from 'lend-core/contracts/protocol/libraries/math/WadRayMath.sol';
-import {ReserveConfiguration} from 'lend-core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
-import {UserConfiguration} from 'lend-core/contracts/protocol/libraries/configuration/UserConfiguration.sol';
-import {DataTypes} from 'lend-core/contracts/protocol/libraries/types/DataTypes.sol';
+import {IERC20Detailed} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/IERC20Detailed.sol';
+import {IPoolAddressesProvider} from '@hopelend/core/contracts/interfaces/IPoolAddressesProvider.sol';
+import {IPool} from '@hopelend/core/contracts/interfaces/IPool.sol';
+import {IHopeOracle} from '@hopelend/core/contracts/interfaces/IHopeOracle.sol';
+import {IHToken} from '@hopelend/core/contracts/interfaces/IHToken.sol';
+import {IVariableDebtToken} from '@hopelend/core/contracts/interfaces/IVariableDebtToken.sol';
+import {IStableDebtToken} from '@hopelend/core/contracts/interfaces/IStableDebtToken.sol';
+import {DefaultReserveInterestRateStrategy} from '@hopelend/core/contracts/protocol/pool/DefaultReserveInterestRateStrategy.sol';
+import {HopeLendProtocolDataProvider} from '@hopelend/core/contracts/misc/HopeLendProtocolDataProvider.sol';
+import {WadRayMath} from '@hopelend/core/contracts/protocol/libraries/math/WadRayMath.sol';
+import {ReserveConfiguration} from '@hopelend/core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
+import {UserConfiguration} from '@hopelend/core/contracts/protocol/libraries/configuration/UserConfiguration.sol';
+import {DataTypes} from '@hopelend/core/contracts/protocol/libraries/types/DataTypes.sol';
 import {IEACAggregatorProxy} from './interfaces/IEACAggregatorProxy.sol';
 import {IERC20DetailedBytes} from './interfaces/IERC20DetailedBytes.sol';
 import {IUiPoolDataProvider} from './interfaces/IUiPoolDataProvider.sol';

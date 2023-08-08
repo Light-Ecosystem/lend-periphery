@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: LGPL-3.0
 pragma solidity 0.8.17;
 
-import {Ownable2Step} from 'lend-core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
-import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
-import {GPv2SafeERC20} from 'lend-core/contracts/dependencies/gnosis/contracts/GPv2SafeERC20.sol';
-import {IWETH} from 'lend-core/contracts/misc/interfaces/IWETH.sol';
-import {IPool} from 'lend-core/contracts/interfaces/IPool.sol';
-import {IHToken} from 'lend-core/contracts/interfaces/IHToken.sol';
-import {ReserveConfiguration} from 'lend-core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
-import {UserConfiguration} from 'lend-core/contracts/protocol/libraries/configuration/UserConfiguration.sol';
-import {DataTypes} from 'lend-core/contracts/protocol/libraries/types/DataTypes.sol';
+import {Ownable2Step} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/Ownable2Step.sol';
+import {IERC20} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
+import {GPv2SafeERC20} from '@hopelend/core/contracts/dependencies/gnosis/contracts/GPv2SafeERC20.sol';
+import {IWETH} from '@hopelend/core/contracts/misc/interfaces/IWETH.sol';
+import {IPool} from '@hopelend/core/contracts/interfaces/IPool.sol';
+import {IHToken} from '@hopelend/core/contracts/interfaces/IHToken.sol';
+import {ReserveConfiguration} from '@hopelend/core/contracts/protocol/libraries/configuration/ReserveConfiguration.sol';
+import {UserConfiguration} from '@hopelend/core/contracts/protocol/libraries/configuration/UserConfiguration.sol';
+import {DataTypes} from '@hopelend/core/contracts/protocol/libraries/types/DataTypes.sol';
 import {IWrappedTokenGateway} from './interfaces/IWrappedTokenGateway.sol';
 import {DataTypesHelper} from '../libraries/DataTypesHelper.sol';
 

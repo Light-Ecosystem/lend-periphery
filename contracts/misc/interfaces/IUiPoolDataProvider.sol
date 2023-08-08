@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LGPL-3.0
 pragma solidity 0.8.17;
 
-import {IPoolAddressesProvider} from 'lend-core/contracts/interfaces/IPoolAddressesProvider.sol';
+import {IPoolAddressesProvider} from '@hopelend/core/contracts/interfaces/IPoolAddressesProvider.sol';
 
 interface IUiPoolDataProvider {
   struct InterestRates {

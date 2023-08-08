@@ -9,11 +9,11 @@ Parameters
 
 Licensor: HopeLend
 
-Licensed Work: AhHopeLendve Periphery. The Licensed Work is (c) 2023 HopeLend
+Licensed Work: HopeLend Periphery. The Licensed Work is (c) 2023 HopeLend
 
-Additional Use Grant: Any uses listed and defined at this [LICENSE](https://github.com/Light-Ecosystem/lend-core/blob/master/LICENSE.md)
+Additional Use Grant: Any uses listed and defined at this [LICENSE](./LICENSE.md)
 
-Change Date: The earlier of 16 May 2023 or a date
+Change Date: The earlier of 8 August 2023
 
 Change License: MIT
 

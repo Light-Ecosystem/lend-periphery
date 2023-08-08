@@ -7,7 +7,7 @@ import {
   getVariableDebtToken,
   MAX_UINT_AMOUNT,
   waitForTx,
-} from 'lend-deploy';
+} from '@hopelend/deploy';
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 
 declare let hre: HardhatRuntimeEnvironment;

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity 0.8.17;
 
-import {IERC20} from 'lend-core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
+import {IERC20} from '@hopelend/core/contracts/dependencies/openzeppelin/contracts/IERC20.sol';
 
 interface IAdminControlledEcosystemReserve {
   /** @notice Emitted when the funds admin changes
